@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rtb2 = new System.Windows.Forms.RichTextBox();
+            this.txtM2 = new System.Windows.Forms.TextBox();
             this.rtbCodificado = new System.Windows.Forms.RichTextBox();
             this.btnEncriptar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.rtb2 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtM2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,9 +44,9 @@
             // 
             this.panel1.BackgroundImage = global::SeguridadInformacion.Properties.Resources.encriptar_telefono_movil;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rtb2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtM2);
             this.panel1.Controls.Add(this.rtbCodificado);
             this.panel1.Controls.Add(this.btnEncriptar);
@@ -57,6 +57,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 374);
             this.panel1.TabIndex = 0;
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(306, 262);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(352, 23);
+            this.btn.TabIndex = 12;
+            this.btn.Text = "button1";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(284, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(394, 21);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Escribe El Codigo A DesEncriptar";
+            // 
+            // rtb2
+            // 
+            this.rtb2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rtb2.Location = new System.Drawing.Point(306, 293);
+            this.rtb2.Name = "rtb2";
+            this.rtb2.Size = new System.Drawing.Size(352, 60);
+            this.rtb2.TabIndex = 10;
+            this.rtb2.Text = "";
+            // 
+            // txtM2
+            // 
+            this.txtM2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtM2.Location = new System.Drawing.Point(306, 235);
+            this.txtM2.Name = "txtM2";
+            this.txtM2.Size = new System.Drawing.Size(352, 20);
+            this.txtM2.TabIndex = 8;
             // 
             // rtbCodificado
             // 
@@ -102,50 +142,6 @@
             this.lblMensaje.TabIndex = 4;
             this.lblMensaje.Text = "Escribe La Frase A Encriptar";
             // 
-            // rtb2
-            // 
-            this.rtb2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtb2.Location = new System.Drawing.Point(306, 293);
-            this.rtb2.Name = "rtb2";
-            this.rtb2.Size = new System.Drawing.Size(352, 60);
-            this.rtb2.TabIndex = 10;
-            this.rtb2.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(306, 261);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(352, 26);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Encriptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtM2
-            // 
-            this.txtM2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtM2.Location = new System.Drawing.Point(306, 235);
-            this.txtM2.Name = "txtM2";
-            this.txtM2.Size = new System.Drawing.Size(352, 20);
-            this.txtM2.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(284, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(394, 21);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Escribe El Codigo A DesEncriptar";
-            // 
             // FormEncriptado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +165,7 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtb2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtM2;
+        private System.Windows.Forms.Button btn;
     }
 }

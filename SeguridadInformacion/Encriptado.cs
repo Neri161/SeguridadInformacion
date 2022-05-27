@@ -60,7 +60,7 @@ namespace SeguridadInformacion
             DesEncriptadoMensaje = "";
             String[] aux = Regex.Split(mensaje, " ");
             List<Double> cadena = new List<Double>();
-            for (int i = 0; i < aux.Length - 1; i++)
+            for (int i = 0; i < aux.Length; i++)
                 cadena.Add(double.Parse(aux[i]));
             List<int> desencriptado = new List<int>();
             try

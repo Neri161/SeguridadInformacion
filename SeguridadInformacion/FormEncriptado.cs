@@ -25,7 +25,7 @@ namespace SeguridadInformacion
             rtbCodificado.Text = "";
             encriptador.Mensaje = txtMensaje.Text;
             encriptador.EncriptarMensaje();
-            
+
             if (!encriptador.Estado)
             {
                 MessageBox.Show("Error", "Mensaje no valido");
@@ -36,7 +36,7 @@ namespace SeguridadInformacion
                 rtbCodificado.Text += $"{a} ";
             }
             encriptador.encriptado.Clear();
-            
+
         }
 
         private void leerArchivo()
@@ -87,12 +87,11 @@ namespace SeguridadInformacion
             sr.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Click(object sender, EventArgs e)
         {
-            rtb2.Text = "";
-            encriptador.DesEncriptarMensaje(txtM2.Text);
-            rtb2.Text = encriptador.DesEncriptadoMensaje;
-
+            String mensaje = txtM2.Text;
+            encriptador.DesEncriptarMensaje(mensaje);
+            rtb2.Text=encriptador.DesEncriptadoMensaje;
         }
     }
 }
